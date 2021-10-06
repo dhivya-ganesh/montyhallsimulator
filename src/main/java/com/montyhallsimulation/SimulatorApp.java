@@ -18,7 +18,7 @@ public class SimulatorApp {
 	public static final Random autoDoorAssigner = new Random();
 
 	@CrossOrigin(origins = "http://localhost:4200")
-	@GetMapping("/simulate/montyhall/{noOfSimulations}/{switchOrStick}")
+	@GetMapping(value = "/simulate/montyhall/{noOfSimulations}/{switchOrStick}", produces = "text/plain")
 	@ResponseBody
 	String simulator(@PathVariable("noOfSimulations") Integer simulations,
 			@PathVariable("switchOrStick") String switchOrStick) {
