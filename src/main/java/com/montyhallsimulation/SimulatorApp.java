@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class SimulatorApp {
 	public static final Random autoDoorAssigner = new Random();
 
 	@CrossOrigin(origins = "http://localhost:4200")
-	@GetMapping(value = "/simulate/montyhall/{noOfSimulations}/{switchOrStick}", produces = "text/plain")
+	@GetMapping(value = "/simulate/montyhall/{noOfSimulations}/{switchOrStick}", produces = MediaType.TEXT_PLAIN_VALUE)
 	@ResponseBody
 	String simulator(@PathVariable("noOfSimulations") Integer simulations,
 			@PathVariable("switchOrStick") String switchOrStick) {
