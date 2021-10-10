@@ -58,9 +58,9 @@ public class SimulatorApp {
 		
 
 		if (switchDoor) {
-			return "Stats with SWITCH strategy - WIN : " + winsBySwitching + " LOSE : " + loseBySwitching;
+			return "WIN : " + winsBySwitching + " LOSE : " + loseBySwitching;
 		} else {
-			return "Stats with STICK strategy - WIN : " + winsBySticking + " LOSE : " + loseBySticking;
+			return "WIN : " + winsBySticking + " LOSE : " + loseBySticking;
 		}
 	}
 
